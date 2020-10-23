@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+<!----mat-toolbar>Menu</mat-toolbar-->
+   
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="white">
+      
+      <span><img src="assets/image/logo.jpg"
+ 
+        width="100"
+        height="70"></span>
+      
+        <td valign="top" class="menu-button">
+          <a mat-list-item [routerLink]="['home']">Home</a></td>
+         
+        <td valign="top" class="menu-button">
+           <a mat-list-item [routerLink]="['add-user']">Private section1</a></td>
+        <td valign="top" class="menu-button">
+          <a mat-list-item [routerLink]="['add-view']">Private section2</a></td>
+        <td valign="top" class="menu-button">
+           <a mat-list-item [routerLink]="['add-update']">Private section3</a></td>
+        <td valign="top" class="menu-button">
+          <a mat-list-item [routerLink]="['add-delete']">Authentification</a></td>
+        
+        
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
